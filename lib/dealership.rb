@@ -26,4 +26,12 @@ attr_reader :name, :address, :inventory, :inventory_count
     end
   end
 
+  def total_value
+    @inventory.map.sum do |car|
+      car.total_cost
+
+    end
+
+  end
+
 end
