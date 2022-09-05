@@ -6,12 +6,14 @@ attr_reader :name, :address, :inventory, :inventory_count
     @address = address
     @inventory = []
     @inventory_count = 0
+    @tot_value = 0
   end
 
   def add_car(car)
     @car = car
     @inventory_count += 1
     @inventory << car
+    @tot_value += car.total_cost
   end
 
   def has_inventory?
@@ -27,10 +29,11 @@ attr_reader :name, :address, :inventory, :inventory_count
   end
 
   def total_value
-    @inventory.map.sum do |car|
-      car.total_cost
+    @tot_value
+  end
 
-    end
+  def details
+
 
   end
 
