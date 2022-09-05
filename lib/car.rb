@@ -7,7 +7,7 @@ class Car
     @make_model = make + model
     @monthly_payment = monthly_payment
     @loan_length = loan_length
-
+    @car_color = nil
 
   end
 
@@ -15,5 +15,8 @@ class Car
     @monthly_payment * @loan_length
   end
 
+  def color
+    @car_color
+  end
 
 end
