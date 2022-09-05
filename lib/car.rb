@@ -19,4 +19,8 @@ class Car
     @car_color
   end
 
+  def paint!(new_color)
+    @car_color = new_color
+  end
+
 end
