@@ -1,5 +1,5 @@
 class Dealership
-attr_reader :name, :address, :inventory, :inventory_count
+attr_reader :name, :address, :inventory, :inventory_count, :tot_value
 
   def initialize(name, address)
     @name = name
@@ -33,8 +33,10 @@ attr_reader :name, :address, :inventory, :inventory_count
   end
 
   def details
-
-
+    deets_hash = {
+      "total_value" => @tot_value,
+      "address" => @address
+    }
   end
 
 end
