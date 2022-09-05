@@ -50,4 +50,17 @@ attr_reader :name, :address, :inventory, :inventory_count, :tot_value
     end
   end
 
+  def inventory_hash
+
+    invent_hash = {}
+
+    @inventory.each do |car|
+      # invent_hash[car.make] ||= []
+      unless invent_hash[car.make]
+        invent_hash[car.make] = []
+      end
+      invent_hash[car.make] << car
+    end
+    invent_hash
+  end
 end
