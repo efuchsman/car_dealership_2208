@@ -8,4 +8,9 @@ attr_reader :name, :address, :inventory, :inventory_count
     @inventory_count = 0
   end
 
+  def add_car(car)
+    @inventory_count += 1
+    @inventory << car
+  end
+
 end
