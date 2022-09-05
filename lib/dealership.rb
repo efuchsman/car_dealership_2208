@@ -39,4 +39,9 @@ attr_reader :name, :address, :inventory, :inventory_count, :tot_value
     }
   end
 
+  def average_price_of_car
+    avg = (@tot_value / inventory_count).to_s
+    avg.gsub(/\B(?=(...)*\b)/, ',')
+  end
+
 end
