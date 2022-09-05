@@ -44,4 +44,10 @@ attr_reader :name, :address, :inventory, :inventory_count, :tot_value
     avg.gsub(/\B(?=(...)*\b)/, ',')
   end
 
+  def cars_sorted_by_price
+    @inventory.sort_by do|car|
+      car.total_cost
+    end
+  end
+
 end

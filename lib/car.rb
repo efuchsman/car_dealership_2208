@@ -5,15 +5,15 @@ class Car
     @make_model = make_model
     @make = make_model.split.first
     @model = make_model.split[1]
-
     @monthly_payment = monthly_payment
     @loan_length = loan_length
     @car_color = nil
+    @tot_cost = monthly_payment * loan_length
 
   end
 
   def total_cost
-    @monthly_payment * @loan_length
+    @tot_cost
   end
 
   def color
