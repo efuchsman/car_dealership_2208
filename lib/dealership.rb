@@ -13,4 +13,8 @@ attr_reader :name, :address, :inventory, :inventory_count
     @inventory << car
   end
 
+  def has_inventory?
+    @inventory_count != 0
+  end
+
 end
